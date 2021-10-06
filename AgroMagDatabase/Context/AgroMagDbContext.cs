@@ -11,7 +11,7 @@ namespace AgroMagDatabase.Context
 {
     public class AgroMagDbContext : DbContext
     {
-        private const string ConnectionString = "Server=(localdb)\\mssqllocaldb;Database=AgroMagDb;Trusted_Connection=True;";
+        private const string ConnectionString = "Server=DESKTOP-RIA25CE\\SQLEXPRESS;Database=AgroMagDb;Trusted_Connection=True;";
 
         public DbSet<Field> Fields { get; set; }
 
@@ -28,7 +28,7 @@ namespace AgroMagDatabase.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer();
+            optionsBuilder.UseSqlServer(ConnectionString);
         }
     }
 }
