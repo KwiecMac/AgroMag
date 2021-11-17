@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgroMagAPI", "AgroMagAPI\AgroMagAPI.csproj", "{DE307E3A-9264-4531-A08A-1E0E4A8E471A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroMagDatabase", "AgroMagDatabase\AgroMagDatabase.csproj", "{D9C76578-60D4-40CF-B0E4-D40611394D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgroMagDatabase", "AgroMagDatabase\AgroMagDatabase.csproj", "{D9C76578-60D4-40CF-B0E4-D40611394D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroMagCore", "AgroMagCore\AgroMagCore.csproj", "{A619EA54-5C8F-4902-B8DA-9485B5566B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D9C76578-60D4-40CF-B0E4-D40611394D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C76578-60D4-40CF-B0E4-D40611394D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C76578-60D4-40CF-B0E4-D40611394D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A619EA54-5C8F-4902-B8DA-9485B5566B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A619EA54-5C8F-4902-B8DA-9485B5566B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A619EA54-5C8F-4902-B8DA-9485B5566B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A619EA54-5C8F-4902-B8DA-9485B5566B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

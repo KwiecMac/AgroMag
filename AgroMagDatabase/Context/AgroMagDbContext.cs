@@ -11,7 +11,13 @@ namespace AgroMagDatabase.Context
 {
     public class AgroMagDbContext : DbContext
     {
-        private const string ConnectionString = "Server=DESKTOP-RIA25CE\\SQLEXPRESS;Database=AgroMagDb;Trusted_Connection=True;";
+        public AgroMagDbContext(DbContextOptions<AgroMagDbContext> options)
+            : base(options)
+        {
+
+        }
+
+        //private const string ConnectionString = "Server=DESKTOP-RIA25CE\\SQLEXPRESS;Database=AgroMagDb;Trusted_Connection=True;";
 
         public DbSet<Field> Fields { get; set; }
 
@@ -26,9 +32,9 @@ namespace AgroMagDatabase.Context
             modelBuilder.ApplyConfiguration(new FieldOperationConfiguration());
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(ConnectionString);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(ConnectionString);
+        //}
     }
 }
