@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using AgroMagCore.IConfiguration;
+using AgroMagCore;
 
 namespace AgroMagAPI
 {
@@ -42,6 +44,9 @@ namespace AgroMagAPI
             });
 
             services.AddControllers();
+
+            // Adding UnitOfWork to the DependencyInjection container
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

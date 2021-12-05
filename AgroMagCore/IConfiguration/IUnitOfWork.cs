@@ -9,7 +9,7 @@ namespace AgroMagCore.IConfiguration
 {
     public interface IUnitOfWork
     {
-        IFieldRepository FieldRepository { get; }
+        IFieldRepository Fields { get; }
 
         Task CompleteAsync();
     }
