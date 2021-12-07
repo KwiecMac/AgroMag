@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AgroMagBusinessLogic.Field.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,19 +10,26 @@ namespace AgroMagAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [AllowAnonymous]
     public class FieldController : ControllerBase
     {
-        public FieldController()
+        private readonly IFieldService fieldService;
+
+        public FieldController(IFieldService fieldService)
         {
-            // TODO: Dependency injection
+            this.fieldService = fieldService;
         }
 
-        [HttpGet]
-        public IActionResult GetFieldList()
+        [HttpPost(nameof(CreateField))]
+        public async Task<IActionResult> CreateField()
         {
-            // TODO: method from service
+            AgroMagDatabase.Models.Field.Field field = new();
+            field.Area = 10;
+            field.Name = "SomeField";
 
-            return this.Ok();
+            await fieldService.CreateFieldAsync(field);
+
+            return Ok();
         }
     }
 }

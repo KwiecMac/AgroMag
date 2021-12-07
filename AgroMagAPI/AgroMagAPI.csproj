@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AgroMagBusinessLogic\AgroMagBusinessLogic.csproj" />
     <ProjectReference Include="..\AgroMagCore\AgroMagCore.csproj" />
     <ProjectReference Include="..\AgroMagDatabase\AgroMagDatabase.csproj" />
   </ItemGroup>

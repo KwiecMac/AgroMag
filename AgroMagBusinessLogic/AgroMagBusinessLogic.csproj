@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Field\Dto\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgroMagCore\AgroMagCore.csproj" />
+    <ProjectReference Include="..\AgroMagDatabase\AgroMagDatabase.csproj" />
+  </ItemGroup>
+
+</Project>
